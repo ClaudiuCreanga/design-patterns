@@ -2,6 +2,9 @@ import abc
 
 # Using an abstract factory we decouple the code from the actual factory that creates the products. So we can have a
 # variety of factories that produce products for different contexts.
+# This is the abstract factory pattern that creates objects through compositions, rather than inheritance like the
+# factory method. Abstract factories are useful when you have families of products. While Factory method is useful to
+# decouple your client code from the concrete classes you need to instantiate.
 
 
 class AbstractPizza(metaclass=abc.ABCMeta):
