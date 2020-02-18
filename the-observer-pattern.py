@@ -1,6 +1,9 @@
 import abc
 from typing import List
 
+# Observer pattern defines a one to many dependency between objects so that when one object changes state,
+# all of its dependents are notified and updated automatically.
+
 
 class AbstractObserver(metaclass=abc.ABCMeta):
 
@@ -103,8 +106,8 @@ class Testit():
 
     def test(self):
         subject = Subject()
-        a = CurrentObserver(subject)
-        b = AnotherObserver(subject)
+        CurrentObserver(subject)
+        AnotherObserver(subject)
         subject.setMeasurements(3,4,5)
         subject.setMeasurements(6,7,8)
 
